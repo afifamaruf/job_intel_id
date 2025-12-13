@@ -14,7 +14,7 @@ from typing import List, Dict, Optional
 from scraper.base.scraper_strategy import ScraperBase
 from scraper.utils.playwright_helper import PlaywrightHelper
 from dotenv import load_dotenv
-from playwright.sync_api import Page, BrowserContext, TimeoutError as PlaywrightTimeout
+from playwright.sync_api import TimeoutError as PlaywrightTimeout
 
 # Load variable environment
 load_dotenv()
