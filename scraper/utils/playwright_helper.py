@@ -90,4 +90,5 @@ class PlaywrightHelper:
         Membuat halaman baru dengan user-agent custom
         """
         context = browser.new_context(user_agent=user_agent)
-        return context.new_page()
+        page = context.new_page()
+        return page, context
