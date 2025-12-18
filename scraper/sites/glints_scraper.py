@@ -28,12 +28,12 @@ DEFAULT_DELAY = float(os.getenv("SCRAPE_DELAY", 2))
 DEFAULT_USER_AGENT = os.getenv("USER_AGENT", None)
 
 class GlintsScraper(ScraperBase):
-    def __init__(self, base_url: str | None = None, headless: bool = True, delay: float | None = None, user_aget: Optional[str] = None):
+    def __init__(self, base_url: str | None = None, headless: bool = True, delay: float | None = None, user_agent: Optional[str] = None):
         self.base_url = base_url or GLINTS_URL
         self.headless = headless
         self.delay = DEFAULT_DELAY if delay is None else delay
-        self.user_agent = user_aget or DEFAULT_USER_AGENT
-        log.debug(f"GlintsScraper init: {self.base_url}, {self.headless}, {self.delay}, {self.user_aget}")
+        self.user_agent = user_agent or DEFAULT_USER_AGENT
+        log.debug(f"GlintsScraper init: {self.base_url}, {self.headless}, {self.delay}, {self.user_agent}")
 
     def fetch_listings(self, limit: int = 100) -> List[Dict]:
         """
