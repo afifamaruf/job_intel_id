@@ -39,3 +39,9 @@ class ScraperBase(ABC):
             }
         """
         pass
+    @abstractmethod
+    def get_site_name(self) -> str:
+        """
+        Mengembalikan nama situs.
+        """
+        pass
