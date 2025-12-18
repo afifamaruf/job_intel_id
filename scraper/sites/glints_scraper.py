@@ -263,3 +263,6 @@ class GlintsScraper(ScraperBase):
             log.info(f"Saved CSV to {csv_path}")
 
         return full_jobs
+    
+    def get_site_name(self) -> str:
+        return "Glints"
