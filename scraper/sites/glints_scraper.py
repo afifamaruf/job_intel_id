@@ -230,7 +230,7 @@ class GlintsScraper(ScraperBase):
         full_jobs = []
         # Ambil detail setiap listing
         for idx, item in enumerate(listings, start=1):
-            log.info(f"Fetching detail {idx}, {len(listings)}, {item.get("url")}")
+            log.info(f"Fetching detail {idx}, {len(listings)}, {item.get('url')}")
             try:
                 detail = self.fetch_job_detail(item["url"])
             except Exception as e:
@@ -263,6 +263,3 @@ class GlintsScraper(ScraperBase):
             log.info(f"Saved CSV to {csv_path}")
 
         return full_jobs
-    
-    def get_site_name(self) -> str:
-        return "Glints"
