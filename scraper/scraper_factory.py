@@ -38,3 +38,8 @@ class ScraperFactory:
             )
         
         return ScraperFactory.registry[site](**kwargs)
+    
+    @staticmethod
+    def list_available() -> list:
+        """Daftar scraper yang tersedia"""
+        return list(ScraperFactory.registry.keys())
